@@ -23,5 +23,14 @@ body {
 }
 
 #maFilm {
-    letter-spacing: 3px;
+    letter-spacing: 10px;
+}
+
+#gotEmAll {
+    text-align: center;
+    color: yellow;
+}
+
+#answeredFilms {
+    color: red;
 }
