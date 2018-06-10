@@ -40,7 +40,7 @@ document.onkeyup = function (event) {
             }
         }
 
-        if (!currentFilm.includes(letterPressed)) {
+        if (!currentFilm.includes(letterPressed) && !lettersGuessed.includes(letterPressed)) {
             console.log("Letter pressed is " + letterPressed);
             numGuesses--;
             document.getElementById('guesses').innerHTML = numGuesses;
@@ -48,13 +48,17 @@ document.onkeyup = function (event) {
             document.getElementById('lettersGuessed').innerHTML = lettersGuessed.join(" ");
         }
     if (event.key === "Enter" && numWins > 0) {
-
+        reset();
     }
 }
 
 
 function reset() {
     var numGuesses = 10;
+    document.getElementById('guesses').innerHTML = numGuesses;
+    currentFilm = maFilms[Math.floor(Math.random()*maFilms.length)].toLowerCase();
+    document.getElementById('maFilm').innerHTML = "";
+    chooseFilm();
 
 }
 
