@@ -6,14 +6,13 @@ var maFilms = ["Enter The Dragon", "Police Story", "The Legend of Drunken Master
 "Crouching Tiger Hidden Dragon", "Fist of Legend", "The Protector", "Ip Man",
 "Five Deadly Venoms", "The 36th Chamber of Shaolin", "Once Upon a Time in China",
 "Master of the Flying Guillotine", "Shogun Assassin", "Wheels on Meals", "Fist of Fury",
-"Rumble in the Bronx", "The 36th Chamber of Shaolin", "The Eight Diagram Pole Fighter"];
+"Rumble in the Bronx", "The Eight Diagram Pole Fighter"];
 // var maFilms = ["Enter The Dragon", "Police Story"];
 var currentFilm = maFilms[Math.floor(Math.random()*maFilms.length)].toLowerCase();
 var currentAnswer = [""];
 var youWon = false;
 var textRemoved = false;
 var answeredFilms = [''];
-
 function parseFilm() {
 
     for (var i = 0; i < currentFilm.length; i++) {
